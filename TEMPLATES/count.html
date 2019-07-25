@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>统计结果</title>
+</head>
+
+<body>
+
+    <h1>this is a html</h1>
+    <p>总字数为{{total_count}}字</p>
+    <!-- 特殊的标识符(包裹total_count的双大括号ps：不输入内容会报错)， 
+         将返回的字典的键输入其中，得到len方法得出的长度 -->
+    <p>你输入的内容是：{{user_text}}</p>
+    <!-- {{sorted}} -->
+    <!-- {{wordict}} -->
+    {% for word ,count in sorted %}
+    <!-- 设置2个变量，Word，count分别代表字符和次数 -->
+    <!-- 用for循环遍历sorted这个排序数组 -->
+
+    {{word}}----{{count}}<br>
+    <!-- 将遍历后的Word，count变量输出 -->
+    {% endfor %}
+    <!-- 用endfor结束循环（必须写，不然报错） -->
+</body>
+
+</html>
