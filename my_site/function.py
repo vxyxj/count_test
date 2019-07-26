@@ -12,6 +12,10 @@ def home(request):
 # 得到请求后进入home.html这个网页
 
 
+def about(request):
+    return render(request, 'about.html')
+
+
 def count(request):
     user_text = request.GET['text']
     # 将requestGET的输入信息赋值给user_text
